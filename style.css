@@ -7,10 +7,14 @@
 
 :root {
   height: 100vh;
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
   margin: 0;
+  background-color: grey;
 }
 
 header {
@@ -62,9 +66,8 @@ form button {
 }
 
 .filter-list {
-  display: grid;
-  grid-template-columns: 17% auto;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding-top: 1.5rem;
   border-bottom: 2px solid black;
   padding-bottom: 1.25rem;
@@ -72,9 +75,20 @@ form button {
   color: white;
 }
 
+.filter-list div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.filter-list label {
+  margin-left: -1rem;
+}
+
 .filter-list input {
   transform: scale(0.5);
-  padding-bottom: 0.15rem;
+  margin-left: 1rem;
+  margin-right: 0rem;
 }
 
 #remove {
@@ -113,11 +127,10 @@ article {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 100vmin;
+
   width: 100%;
   overflow: auto;
   border-top: 2px solid white;
-  background-color: grey;
 
   padding: 1rem;
 }

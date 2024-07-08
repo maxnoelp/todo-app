@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <style>
-        .strikethrough {
-            text-decoration: line-through;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Todo App</title>
+
 </head>
 
 <body>
@@ -22,10 +23,13 @@
         <button>Add</button>
     </form>
     <div class="filter-list">
-        <input type="checkbox" name="" id="filter-all"><label for="checkbox">all</label>
-        <input type="checkbox" name="" id="filter-active"><label for="checkbox">Active</label>
-        <input type="checkbox" id="filter-completed"><label for="checkbox">done</label>
+
+        <div><input type="checkbox" name="" id="filter-all"><label for="checkbox">all</label></div>
+        <div><input type="checkbox" name="" id="filter-active"><label for="checkbox">Active</label></div>
+        <div> <input type="checkbox" id="filter-completed"><label for="checkbox">done</label></div>
+
         <button id="remove">remove done todos</button>
+
     </div>
     <div class="todo-container">
         <ul id="todo-list"></ul>
