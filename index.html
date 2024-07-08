@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .strikethrough {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Todo App</h1>
+    </header>
+    <form id="new-todo-form">
+        <input id="new-todo-description" type="text" />
+        <button>Add</button>
+    </form>
+    <div class="filter-list">
+        <input type="checkbox" name="" id="filter-all"><label for="checkbox">all</label>
+        <input type="checkbox" name="" id="filter-active"><label for="checkbox">Active</label>
+        <input type="checkbox" id="filter-completed"><label for="checkbox">done</label>
+        <button id="remove">remove done todos</button>
+    </div>
+    <div class="todo-container">
+        <ul id="todo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
