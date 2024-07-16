@@ -14,6 +14,7 @@
     <style>
         .strikethrough {
             text-decoration: line-through red;
+            color: red;
 
         }
     </style>
@@ -23,17 +24,23 @@
     <header>
         <h1>Todo App</h1>
     </header>
-    <form id="new-todo-form">
-        <input id="new-todo-description" type="text" />
-        <button>Add</button>
-    </form>
+    <div class="input-todo">
+        <form id="new-todo-form">
+            <input id="new-todo-description" type="text" placeholder="Hier bitte Todo eingeben..." />
+
+            <button id="add-todo">Add</button>
+
+
+        </form>
+        <div id="warnung" style="color: red;"></div>
+    </div>
     <div class="filter-list">
 
-        <div><input type="checkbox" name="" id="filter-all"><label for="checkbox">all</label></div>
-        <div><input type="checkbox" name="" id="filter-active"><label for="checkbox">Active</label></div>
-        <div> <input type="checkbox" id="filter-completed"><label for="checkbox">done</label></div>
+        <div><input type="radio" name="" id="filter-all"><label for="radio">all</label></div>
+        <div><input type="radio" name="" id="filter-active"><label for="radio">active</label></div>
+        <div> <input type="radio" id="filter-completed"><label for="radio">done</label></div>
 
-        <button id="remove">remove selcted todos</button>
+        <button id="remove">remove selected todos</button>
 
     </div>
     <div class="todo-container">

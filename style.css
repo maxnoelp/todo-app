@@ -37,12 +37,14 @@ header h1 {
   color: white;
 }
 
-form {
+.input-todo {
   display: flex;
-  padding-top: 2rem;
+  flex-direction: column;
+  padding-top: 3rem;
   padding-bottom: 2rem;
   gap: 1rem;
-  justify-content: center;
+  align-items: center;
+
   border-bottom: 2px solid white;
   background-color: grey;
 }
@@ -57,8 +59,9 @@ form input {
   box-shadow: 2px 2px 3px 0px black;
 }
 
-form button {
+.input-todo button {
   width: 4rem;
+  height: 2.5rem;
   border-radius: 10px;
   background-color: white;
   font-size: 1.25rem;
@@ -86,15 +89,19 @@ form button {
 }
 
 .filter-list input {
-  transform: scale(0.5);
   margin-left: 1rem;
   margin-right: 0rem;
+}
+
+input[type="radio"]:checked + label {
+  color: blue;
 }
 
 #remove {
   margin-left: 2rem;
   width: 140px;
   margin-top: 1rem;
+  font-size: 0.75rem;
   background-color: black;
   color: white;
   border-radius: 10px;
@@ -148,4 +155,56 @@ article {
   color: white;
   padding: 1rem;
   margin: 0rem;
+}
+
+@media (min-width: 770px) {
+  body {
+    font-size: 2rem;
+  }
+
+  header h1 {
+    font-size: 5rem;
+  }
+
+  form input {
+    width: 40rem;
+    height: 4rem;
+  }
+
+  .input-todo button {
+    height: 4rem;
+    width: 8rem;
+  }
+
+  .filter-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .filter-list div {
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #remove {
+    width: 200px;
+    height: 40px;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .todo-container {
+    align-items: center;
+  }
+
+  .todo-container li {
+    width: 50rem;
+    font-size: 2rem;
+  }
+
+  .filter-list input {
+    transform: scale(1.25);
+  }
 }
