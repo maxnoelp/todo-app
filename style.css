@@ -49,6 +49,10 @@ header h1 {
   background-color: grey;
 }
 
+input[type="text"] {
+  font-size: 1rem;
+}
+
 form input {
   width: 15rem;
   height: 2.5rem;
@@ -71,7 +75,8 @@ form input {
 .filter-list {
   display: flex;
   flex-direction: column;
-  padding-top: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1rem;
   border-bottom: 2px solid black;
   padding-bottom: 1.25rem;
   background-color: black;
@@ -81,11 +86,10 @@ form input {
 .filter-list div {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
 }
 
 .filter-list label {
-  margin-left: -1rem;
+  margin-left: -1.5rem;
 }
 
 .filter-list input {
@@ -94,7 +98,11 @@ form input {
 }
 
 input[type="radio"]:checked + label {
-  color: blue;
+  color: rgb(255, 0, 0);
+}
+
+input[type="radio"] {
+  scale: 0.5;
 }
 
 #remove {
@@ -183,9 +191,7 @@ article {
   }
 
   .filter-list div {
-    gap: 0.5rem;
     justify-content: center;
-    align-items: center;
   }
 
   #remove {
