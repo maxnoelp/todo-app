@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=abel:400">
 
     <title>Todo App</title>
     <style>
         .strikethrough {
-            text-decoration: line-through red;
-            color: red;
+            text-decoration: line-through rgb(29, 121, 133);
+            color: rgb(29, 121, 133);
 
+        }
+
+        .rotata {
+            rotate: 45deg;
         }
     </style>
 </head>
@@ -24,16 +25,7 @@
     <header>
         <h1>Todo App</h1>
     </header>
-    <div class="input-todo">
-        <form id="new-todo-form">
-            <input id="new-todo-description" type="text" placeholder="Hier bitte Todo eingeben..." />
 
-            <button id="add-todo">Add</button>
-
-
-        </form>
-        <div id="warnung" style="color: red;"></div>
-    </div>
     <div class="filter-list">
 
         <div><input type="radio" name="" id="filter-all"><label for="radio">ALL</label></div>
@@ -43,9 +35,25 @@
         <button id="remove">remove selected todos</button>
 
     </div>
+
+    <div class="form-container">
+        <button id="show-input-container">+</button>
+        <form id="new-todo-form">
+            <input id="new-todo-description" type="text" placeholder="Hier bitte Todo eingeben..." />
+
+            <button id="add-todo">Add</button>
+
+
+        </form>
+        <div id="warnung" style="color: red;"></div>
+    </div>
+
+
     <div class="todo-container">
         <ul id="todo-list"></ul>
     </div>
+
+
     <script src="script.js"></script>
 </body>
 

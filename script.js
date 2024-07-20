@@ -172,4 +172,23 @@ filterCompletedCheckbox.addEventListener("change", () => {
   }
 });
 
+window.addEventListener("load", () => {
+  filterAllCheckbox.checked = true;
+  state.currentFilter = "all";
+  render();
+});
+
 loadData();
+
+const btnShow = document.getElementById("show-input-container");
+
+btnShow.addEventListener("click", function () {
+  let inputContainer = document.getElementById("new-todo-form");
+  if (inputContainer.style.display === "none") {
+    inputContainer.style.display = "flex";
+    btnShow.classList.add("rotata");
+  } else {
+    inputContainer.style.display = "none";
+    btnShow.classList.remove("rotata");
+  }
+});
